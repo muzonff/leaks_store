@@ -18,7 +18,7 @@ type DB_CFG struct {
 	User     string
 	Password string
 	Host     string
-	db_name  string
+	Db       string
 }
 
 func main() {
@@ -27,8 +27,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err.Error())
 	}
-	conn_string := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s", conf.User, conf.Password, conf.Host, conf.Port, conf.db_name)
-	db, err := sql.Open("mysql", conn_string) //root:root@tcp(localhost:8889)/digger
+	conn_string := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s", conf.User, conf.Password, conf.Host, conf.Port, conf.Db)
+	db, err := sql.Open("mysql", conn_string)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -40,7 +40,6 @@ func main() {
 	if work_type == "1" {
 		search(db)
 	} else {
-
 		// Спросить пользователя, какой файл он хочет парсить
 		fmt.Print("Введите путь к файлу (Excel или CSV): ")
 		filePath, _ := reader.ReadString('\n')
