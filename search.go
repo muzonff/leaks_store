@@ -13,12 +13,6 @@ import (
 )
 
 func search(db *sql.DB) {
-	// Подключение к базе данных
-	db, err := sql.Open("mysql", "root:root@tcp(localhost:8889)/digger")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer db.Close()
 
 	reader := bufio.NewReader(os.Stdin)
 
