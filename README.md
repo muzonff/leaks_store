@@ -8,9 +8,9 @@ Simple Golang app to convert CSV/EXCEL data leaks to one MYSQL base
 -  Searching across all converted recodrs
 
 ## Technologies 
-- [SQL driver for Golang](github.com/go-sql-driver/mysql)
-- [Envconfig](github.com/kelseyhightower/envconfig)
-- [Excelize (lib for working with Excel files on Go)](github.com/xuri/excelize)
+- [SQL driver for Golang](https://github.com/go-sql-driver/mysql)
+- [Envconfig](https://github.com/kelseyhightower/envconfig)
+- [Excelize (lib for working with Excel files on Go)](https://github.com/xuri/excelize)
 
 ## Usage
 1) Clone repository and install depends
@@ -25,7 +25,7 @@ Simple Golang app to convert CSV/EXCEL data leaks to one MYSQL base
     export STORE_USER=root
     export STORE_PASSWORD=root
     export STORE_HOST=localhost
-    export STORE_DB_NAME=digger
+    export STORE_DB=digger
    ```
 3) Just run app
    ```sh
